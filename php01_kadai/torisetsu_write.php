@@ -8,7 +8,7 @@ $time = date('Y-m-d H:i') ;
 // Inputファイルより受け取り
 $forMyColleague01 = $_POST['forMyColleague01'] ;
 $forMyColleague02 = $_POST['forMyColleague02'] ;
-$forMyColleague03 = $_POST['forMyColleague03'] ;
+$forMyColleague03 = $_POST['forMyColleague03'] ;    
 $forMyColleague04 = $_POST['forMyColleague04'] ;
 $forMyColleague05 = $_POST['forMyColleague05'] ;
 $forMyColleague06 = $_POST['forMyColleague06'] ;
@@ -51,10 +51,6 @@ $file = fopen('data/torisetsu_data.txt','w');  // 1 開く
 fwrite($file, $str."\n");           // 2 書く
 
 fclose($file);                       // 3 閉じる
-
-
-
-
 
 
 

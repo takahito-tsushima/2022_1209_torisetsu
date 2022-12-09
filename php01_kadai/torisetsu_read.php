@@ -4,11 +4,12 @@
 $openFile = fopen('./data/torisetsu_data.txt', 'r');
 
 
-//【1】
 // #2 テーブルのHTMLを生成
 
 echo "<h1>私のトリセツ（あなたを伝える10の質問）/ 10 Magic Questions!</h1>";
 
+
+// #3 csvデータを配列に変換し、HTMLに埋め込み
 
 while($str = fgetcsv($openFile)) {
     echo "<p>回答日時</p>";
@@ -32,7 +33,7 @@ while($str = fgetcsv($openFile)) {
 
     echo "<tr>";    
     for ($i=1;$i<11;$i++) {
-    // for ($i=0;$i<count($str1);$i++) {   
+    // for ($i=0;$i<count($str);$i++) {   
         echo "<td>" . $str[$i] . "</td>";
     }
     echo "</tr></table>";
@@ -55,7 +56,7 @@ while($str = fgetcsv($openFile)) {
 
     echo "<tr>";    
     for ($i=11;$i<21;$i++) {
-    // for ($i=0;$i<count($str1);$i++) {   
+    // for ($i=0;$i<count($str);$i++) {   
         echo "<td>" . $str[$i] . "</td>";
     }
     echo "</tr></table>";
@@ -78,112 +79,12 @@ while($str = fgetcsv($openFile)) {
 
     echo "<tr>";    
     for ($i=21;$i<31;$i++) {
-    // for ($i=0;$i<count($str1);$i++) {   
+    // for ($i=0;$i<count($str);$i++) {   
         echo "<td>" . $str[$i] . "</td>";
     }
     echo "</tr></table>";
 
 }
-
-
-
-
-
-
-// //【1】
-// // #2 テーブルのHTMLを生成
-
-// echo "<h2>【1】チームの皆さんへ</h2>
-// <table>
-// <tr>
-// <th>1.初対面は？</th>
-// <th>2.誰かに話しかけられるのは？</th>
-// <th>3.自分から話しかけるのは？</th>
-// <th>4.誰かに教わるのは？</th>
-// <th>5.自分が教えるのは？</th>
-// <th>6.自分が仕事で困ったら？</th>
-// <th>7.誰かが仕事で困ったら？</th>
-// <th>8.ランチの誘いは？</th>
-// <th>9.飲み会の誘いは？</th>
-// <th>10.プライベートの話は？</th>
-// </tr>";
-
-// // #3 csvデータを配列に変換し、HTMLに埋め込み
-// while($str = fgetcsv($openFile)) {
-//     echo "<tr>";
-//     for ($i=1;$i<11;$i++) {
-//     // for ($i=0;$i<count($str1);$i++) {   
-//         echo "<td>" . $str[$i] . "</td>";
-//     }
-//     echo "</tr>";
-// }
-// echo "</table>";
-
-
-
-// //【2】
-// // #2 テーブルのHTMLを生成
-
-// echo "<h2>【1】チームの皆さんへ</h2>
-// <table>
-// <tr>
-// <th>1.初対面は？</th>
-// <th>2.誰かに話しかけられるのは？</th>
-// <th>3.自分から話しかけるのは？</th>
-// <th>4.誰かに教わるのは？</th>
-// <th>5.自分が教えるのは？</th>
-// <th>6.自分が仕事で困ったら？</th>
-// <th>7.誰かが仕事で困ったら？</th>
-// <th>8.ランチの誘いは？</th>
-// <th>9.飲み会の誘いは？</th>
-// <th>10.プライベートの話は？</th>
-// </tr>";
-
-// // #3 csvデータを配列に変換し、HTMLに埋め込み
-// while($str = fgetcsv($openFile)) {
-//     echo "<tr>";
-//     for ($i=11;$i<21;$i++) {   
-//     // for ($i=0;$i<count($str2);$i++) {   
-//         echo "<td>" . $str[$i] . "</td>";
-//     }
-//     echo "</tr>";
-// }
-// echo "</table>";
-
-
-
-// //【3】
-// // #2 テーブルのHTMLを生成
-
-// echo "<h2>【1】チームの皆さんへ</h2>
-// <table>
-// <tr>
-// <th>1.初対面は？</th>
-// <th>2.誰かに話しかけられるのは？</th>
-// <th>3.自分から話しかけるのは？</th>
-// <th>4.誰かに教わるのは？</th>
-// <th>5.自分が教えるのは？</th>
-// <th>6.自分が仕事で困ったら？</th>
-// <th>7.誰かが仕事で困ったら？</th>
-// <th>8.ランチの誘いは？</th>
-// <th>9.飲み会の誘いは？</th>
-// <th>10.プライベートの話は？</th>
-// </tr>";
-
-
-// // #3 csvデータを配列に変換し、HTMLに埋め込み
-// while($str = fgetcsv($openFile)) {
-//     echo "<tr>";
-//     for ($i=21;$i<31;$i++) {
-//     // for ($i=0;$i<count($str3);$i++) {   
-
-//         echo "<td>" . $str[$i] . "</td>";
-//     }
-//     echo "</tr>";
-// }
-// echo "</table>";
-
-
 
 
 // #4 ファイルを閉じる

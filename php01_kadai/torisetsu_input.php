@@ -332,11 +332,6 @@
 	});
 
 
-//     //送信ボタンで一番下にスクロール
-//   const end = $("#forMyBoss").get(0);
-//   end.scrollTo(0, end.scrollHeight);
-
-
 </script>
 
 
